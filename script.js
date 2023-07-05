@@ -23,7 +23,7 @@ let dataFetch = async () => {
     }
 
     try {
-        let res = await fetch(`http://api.weatherapi.com/v1/current.json?key=9a3ef3e4ad19440889c104656230407&q=${placeName}&aqi=yes`)
+        let res = await fetch(`https://api.weatherapi.com/v1/current.json?key=650fe83132234e17a43112034230507&q=${placeName}&aqi=yes`)
         let data = await res.json();
         placeId.innerHTML = data.location.name
         tempretureId.textContent = `${data.current.temp_c}\xB0`
