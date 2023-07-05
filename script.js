@@ -22,7 +22,7 @@ let dataFetch = async () => {
         placeName = inputData.value
     }
 
-    try {
+    // try {
         let res = await fetch(`http://api.weatherapi.com/v1/current.json?key=9a3ef3e4ad19440889c104656230407&q=${placeName}&aqi=yes`)
         let data = await res.json();
         placeId.innerHTML = data.location.name
@@ -60,19 +60,19 @@ let dataFetch = async () => {
         else {
             imgs.src = data.current.condition.icon
         }
-    } catch (error) {
-        let alerts = document.querySelector('.alertBox')
-        let alertFunc = () => {
-            alerts.innerHTML = `<div class="alert" data-aos="fade-down" data-aos-duration="800" >
-          Please enter a valid city !
-            </div>`
-            setTimeout(function () {
-                alerts.innerHTML = "";
-            }, 2600)
-        }
-        alertFunc();
-        console.error(error)
-    }
+    // } catch (error) {
+    //     let alerts = document.querySelector('.alertBox')
+    //     let alertFunc = () => {
+    //         alerts.innerHTML = `<div class="alert" data-aos="fade-down" data-aos-duration="800" >
+    //       Please enter a valid city !
+    //         </div>`
+    //         setTimeout(function () {
+    //             alerts.innerHTML = "";
+    //         }, 2600)
+    //     }
+    //     alertFunc();
+    //     console.error(error)
+    // }
 
 }
 
