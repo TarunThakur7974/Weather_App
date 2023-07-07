@@ -61,6 +61,7 @@ input {
     width: 50%;
     margin: 0px auto;
     display: flex;
+    gap:8px;
 }
 
 button {
